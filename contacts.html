@@ -24,24 +24,45 @@
         </div>
 
     </header>
-    <main class="main contacts">
-        <h1 class="heading contacts__heading">Обратная связь</h1>
-        <p class="contacts__description">Заполните форму, и мы свяжемся с Вами в течение двух рабочих дней</p>
-        <form class="contacts-form" id="contacts-form">
-            <div class="contacts-form__input-group">
-                <label for="name" class="contacts-form__label">Имя и фамилия:</label>
-                <input type="text" id="name" class="contacts-form__input" required>
+    <main class="main">
+        <section class="faq">
+            <h1 class="heading">Часто задаваемые вопросы</h1>
+            <div class="faq__accordion">
+                <h2 class="faq__accordion-title heading">Сколько стоит доставка?</h2>
+                <div class="faq__accordion-hidden-part">
+                    Доставка всех товаров абсолютно бесплатная!
+                </div>
             </div>
-            <div class="contacts-form__input-group">
-                <label for="email" class="contacts-form__label">Адрес электронной почты:</label>
-                <input type="text" id="email" class="contacts-form__input" required>
+            <div class="faq__accordion">
+                <h2 class="faq__accordion-title heading">Каков срок возврата?</h2>
+                <div class="faq__accordion-hidden-part">
+                    Если Вас не устроило качество товара, то Вы можете вернуть его в течение двух недель. Обратите внимание, что некоторые категории товаров не подлежат возврату.
+                </div>
             </div>
-            <div class="contacts-form__input-group">
-                <label for="subject" class="contacts-form__label">Что бы Вы хотели обсудить?</label>
-                <textarea id="subject" class="contacts-form__input contacts-form__textarea" required></textarea>
-            </div>
-            <button class="button contacts-form__submit">Отправить</button>
-        </form>
+            <p>Всё ещё остались вопросы?</p>
+            <button class="button faq__open-dialog-button" id="open-dialog">Связаться с нами</button>
+        </section>
+        <dialog class="contacts" id="contact-us">
+            <button class="contacts__close" id="close-dialog">
+                <img src="./images/close.png" alt="Закрыть окно обратной связи" height="20" width="20">
+            </button>
+            <p class="contacts__description">Заполните форму, и мы свяжемся с Вами в течение двух рабочих дней</p>
+            <form class="contacts-form" id="contacts-form">
+                <div class="contacts-form__input-group">
+                    <label for="name" class="contacts-form__label">Имя и фамилия:</label>
+                    <input type="text" id="name" class="contacts-form__input" required>
+                </div>
+                <div class="contacts-form__input-group">
+                    <label for="email" class="contacts-form__label">Адрес электронной почты:</label>
+                    <input type="text" id="email" class="contacts-form__input" required>
+                </div>
+                <div class="contacts-form__input-group">
+                    <label for="subject" class="contacts-form__label">Что бы Вы хотели обсудить?</label>
+                    <textarea id="subject" class="contacts-form__input contacts-form__textarea" required></textarea>
+                </div>
+                <button class="button contacts-form__submit">Отправить</button>
+            </form>
+        </dialog>
     </main>
     <footer id="contacts" class="footer">
         <p>&copy; 2026 Элла Ксенофонтова. Все права защищены.</p>
@@ -55,6 +76,27 @@
                 event.preventDefault();
                 alert("Ваше сообщение отправлено!");
                 window.location.href = "index.html";
+            })
+        }
+
+        document.body.addEventListener("click", (event) => {
+            if (event.target.classList.contains("faq__accordion-title")) {
+                const hiddenPart = event.target.nextElementSibling;
+                hiddenPart.classList.toggle("faq__accordion-hidden-part_open");
+            }
+        });
+
+        const contactUsButton = document.getElementById("open-dialog");
+        const contactUsDialog = document.getElementById("contact-us");
+        const closeDialogButton = document.getElementById("close-dialog");
+
+        if (contactUsButton && contactUsDialog && closeDialogButton) {
+            contactUsButton.addEventListener("click", () => {
+                contactUsDialog.showModal();
+            });
+
+            closeDialogButton.addEventListener("click", () => {
+                contactUsDialog.close();
             })
         }
     </script>

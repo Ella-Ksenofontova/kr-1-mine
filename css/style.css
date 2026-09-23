@@ -45,6 +45,7 @@ body {
   --card-bg: #c2deff;
   --order-input-border-color: #dddddd;
   --contacts-input-border-color: #dddddd;
+  --accordion-border-color: #dddddd;
 }
 
 .header,
@@ -577,8 +578,28 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-.client-info__submit, 
+.client-info__submit,
 .contacts-form__submit {
+  border: none;
+  cursor: pointer;
+}
+
+.faq {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contacts {
+  max-width: 500px;
+  border-width: 0;
+  border-radius: 10px;
+}
+
+.contacts__close {
+  float: right;
+  width: 25px;
+  height: 25px;
+  background: transparent;
   border: none;
   cursor: pointer;
 }
@@ -589,6 +610,7 @@ body {
 
 .contacts__description {
   margin: 0;
+  margin-top: 15px;
   color: var(--description-color);
 }
 
@@ -621,4 +643,30 @@ body {
 .contacts-form__textarea {
   resize: none;
   height: 200px;
+}
+
+.faq__accordion-title {
+  cursor: pointer;
+  margin-block: 10px;
+}
+
+.faq__accordion-hidden-part {
+  margin-bottom: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1.5s;
+}
+
+.faq__accordion-hidden-part_open {
+  max-height: 2000px;
+  transition: all 2.5s;
+}
+
+.faq__accordion:not(:last-of-type) {
+  border-bottom: 1px solid var(--accordion-border-color);
+}
+
+.faq__open-dialog-button {
+  border: none;
+  cursor: pointer;
 }
