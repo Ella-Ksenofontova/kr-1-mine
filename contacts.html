@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="site-header">
+            <a class="site-logo" href="index.html">MyShop</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__list-item"><a href="./catalog.html" class="site-nav__link">Каталог</a></li>
+                    <li class="site-nav__list-item"><a href="./order.html" class="site-nav__link">Оформить заказ</a>
+                    </li>
+                    <li class="site-nav__list-item"><a href="./contacts.html" class="site-nav__link">Обратная связь</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main class="main contacts">
+        <h1 class="heading contacts__heading">Обратная связь</h1>
+        <p class="contacts__description">Заполните форму, и мы свяжемся с Вами в течение двух рабочих дней</p>
+        <form class="contacts-form" id="contacts-form">
+            <div class="contacts-form__input-group">
+                <label for="name" class="contacts-form__label">Имя и фамилия:</label>
+                <input type="text" id="name" class="contacts-form__input" required>
+            </div>
+            <div class="contacts-form__input-group">
+                <label for="email" class="contacts-form__label">Адрес электронной почты:</label>
+                <input type="text" id="email" class="contacts-form__input" required>
+            </div>
+            <div class="contacts-form__input-group">
+                <label for="subject" class="contacts-form__label">Что бы Вы хотели обсудить?</label>
+                <textarea id="subject" class="contacts-form__input contacts-form__textarea" required></textarea>
+            </div>
+            <button class="button contacts-form__submit">Отправить</button>
+        </form>
+    </main>
+    <footer id="contacts" class="footer">
+        <p>&copy; 2026 Элла Ксенофонтова. Все права защищены.</p>
+        <p><a class="footer__link" href="tel:89858944403">+7 (985)-894-44-03</a></p>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script>
+        const contactsForm = document.getElementById("contacts-form");
+        if (contactsForm) {
+            contactsForm.addEventListener("submit", event => {
+                event.preventDefault();
+                alert("Ваше сообщение отправлено!");
+                window.location.href = "index.html";
+            })
+        }
+    </script>
+</body>
+
+</html>

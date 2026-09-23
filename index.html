@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой интернет-магазин</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="site-header">
+            <a class="site-logo" href="index.html">MyShop</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__list-item"><a href="./catalog.html" class="site-nav__link">Каталог</a></li>
+                    <li class="site-nav__list-item"><a href="./order.html" class="site-nav__link">Оформить заказ</a>
+                    </li>
+                    <li class="site-nav__list-item"><a href="./contacts.html" class="site-nav__link">Обратная связь</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main class="main">
+        <section class="hero">
+            <h1 class="heading heading_level-1">Мой интернет-магазин</h1>
+            <p class="hero__description">
+                Самый классный Интернет-магазин в России, а может, и в мире
+            </p>
+            <a class="button" href="#popular">Перейти к товарам</a>
+        </section>
+        <section class="section section_advantages" id="advantages">
+            <h2 class="heading heading_level-2">Почему стоит выбрать наш магазин?</h2>
+
+            <ul class="advantages-list">
+                <li class="advantages-list__item">
+                    <img src="./images/speed.png" alt="" class="advantages-list__icon">
+                    <p class="advantages-list__description">Быстрая доставка в пределах двух недель</p>
+                </li>
+                <li class="advantages-list__item">
+                    <img src="./images/goods.png" alt="" class="advantages-list__icon">
+                    <p class="advantages-list__description">Широкий ассортимент</p>
+                </li>
+                <li class="advantages-list__item">
+                    <img src="./images/like.png" alt="" class="advantages-list__icon">
+                    <p class="advantages-list__description">Высокое качество</p>
+                </li>
+            </ul>
+        </section>
+        <section class="section section_popular" id="popular">
+            <h2 class="heading heading_level-2">Популярные товары</h2>
+
+            <div class="popular-goods">
+                <article class="product-card">
+                    <img src="./images/shoes.jpg" alt="Кроссовки" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Кроссовки</h3>
+                        <p class="product-card__description">Стильные и удобные кроссовки</p>
+                        <p class="product-card__price">Цена: 2500 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="./images/pencils.jpg" alt="Цветные карандаши" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Цветные карандаши</h3>
+                        <p class="product-card__description">Яркие и прочные цветные карандаши</p>
+                        <p class="product-card__price">Цена: 200 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="./images/perfume.jpg" alt="Парфюм" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Парфюм</h3>
+                        <p class="product-card__description">Ароматный парфюм для женщин</p>
+                        <p class="product-card__price">Цена: 5000 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+            </div>
+        </section>
+        <div class="aside-wrapper">
+            <button class="open-aside-button" id="open-aside">
+                <img src="./images/left-chevron.png" alt="Открыть боковую панель" class="open-aside-button__icon">
+            </button>
+            <aside class="aside-menu">
+                <div class="aside-menu__content">
+                    <button class="close-aside-button" id="close-aside"><img src="./images/close.png"
+                            alt="Закрыть боковое меню" class="close-aside-button__icon"></button>
+                    <h2 class="heading aside-menu__heading">Содержание страницы</h2>
+                    <ul class="aside-menu__list">
+                        <li class="aside-menu__list-item"><a href="index.html" class="aside-menu__link">Главная</a></li>
+                        <li class="aside-menu__list-item"><a href="#popular" class="aside-menu__link">Популярные
+                                товары</a>
+                        </li>
+                        <li class="aside-menu__list-item"><a href="#advantages"
+                                class="aside-menu__link">Преимущества</a>
+                        </li>
+                        <li class="aside-menu__list-item"><a href="#contacts" class="aside-menu__link">Контакты</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer id="contacts" class="footer">
+        <p>&copy; 2026 Элла Ксенофонтова. Все права защищены.</p>
+        <p><a class="footer__link" href="tel:89858944403">+7 (985)-894-44-03</a></p>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

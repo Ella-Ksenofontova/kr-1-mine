@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образец страницы с товаром</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="site-header">
+            <a class="site-logo" href="index.html">MyShop</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__list-item"><a href="./catalog.html" class="site-nav__link">Каталог</a></li>
+                    <li class="site-nav__list-item"><a href="./order.html" class="site-nav__link">Оформить заказ</a>
+                    </li>
+                    <li class="site-nav__list-item"><a href="./contacts.html" class="site-nav__link">Обратная связь</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main class="main">
+        <section class="product-info">
+            <h1 class="heading product-info__heading">Образец страницы с товаром</h1>
+            <img src="./images/shoes.jpg" alt="Образец товара" class="product-info__image">
+            <div class="product-info__wrapper">
+                <div class="product-order-wrapper">
+                    <div class="product-order-wrapper__price">2500 руб.</div>
+                    <a href="order.html" class="button">Купить</a>
+                </div>
+                <table class="product-info__table">
+                    <caption class="product-info__caption">Характеристики товара</caption>
+                    <thead></thead>
+                    <tbody class="product-info__table-body">
+                        <tr class="product-info__table-row">
+                            <td class="product-info__table-cell">Материал</td>
+                            <td class="product-info__table-cell">Искусственная кожа, резина</td>
+                        </tr>
+                        <tr class="product-info__table-row">
+                            <td class="product-info__table-cell">Страна производства</td>
+                            <td class="product-info__table-cell">Китай</td>
+                        </tr>
+                        <tr class="product-info__table-row">
+                            <td class="product-info__table-cell">Категория</td>
+                            <td class="product-info__table-cell">Обувь</td>
+                        </tr>
+                        <tr class="product-info__table-row">
+                            <td class="product-info__table-cell">Пол</td>
+                            <td class="product-info__table-cell">Унисекс</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer id="contacts" class="footer">
+        <p>&copy; 2026 Элла Ксенофонтова. Все права защищены.</p>
+        <p><a class="footer__link" href="tel:89858944403">+7 (985)-894-44-03</a></p>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

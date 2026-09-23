@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="site-header">
+            <a class="site-logo" href="index.html">MyShop</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__list-item"><a href="./catalog.html" class="site-nav__link">Каталог</a></li>
+                    <li class="site-nav__list-item"><a href="./order.html" class="site-nav__link">Оформить заказ</a>
+                    </li>
+                    <li class="site-nav__list-item"><a href="./contacts.html" class="site-nav__link">Обратная связь</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main class="main">
+        <div class="order-wrapper">
+            <section class="order-wrapper__items">
+                <h1 class="heading order-wrapper__heading">Оформить заказ</h1>
+                <h2 class="heading">3 товара</h2>
+                <ul class="items-in-order">
+                    <li class="item-in-order">
+                        <img src="./images/shoes.jpg" alt="" class="item-in-order__thumb">
+                        <h3 class="item-in-order__name heading"><a href="./product.html"
+                                class="item-in-order__link">Кроссовки</a></h3>
+                        <div class="item-in-order__price">
+                            2500 руб.
+                        </div>
+                    </li>
+                    <li class="item-in-order">
+                        <img src="./images/clock.jpg" alt="" class="item-in-order__thumb">
+                        <h3 class="item-in-order__name heading"><a href="./product.html"
+                                class="item-in-order__link">Часы настенные</a></h3>
+                        <div class="item-in-order__price">
+                            <del class="old-price">1200</del> 900 руб.
+                        </div>
+                    </li>
+                    <li class="item-in-order">
+                        <img src="./images/perfume.jpg" alt="" class="item-in-order__thumb">
+                        <h3 class="item-in-order__name heading"><a href="./product.html"
+                                class="item-in-order__link">Парфюм</a></h3>
+                        <div class="item-in-order__price">
+                            5000 руб.
+                        </div>
+                    </li>
+                </ul>
+                <div class="order-wrapper__total">Итого: 8400 руб.</div>
+            </section>
+            <aside class="client-info">
+                <form class="client-info__form" id="order-form">
+                    <div class="client-info__card-sides">
+                        <div class="client-info__card-front">
+                            <div class="client-info__input-group client-info__input-group_span-2">
+                                <label for="card-number" class="client-info__label">Номер карты:</label>
+                                <input class="client-info__input" type="text" id="card-number" required>
+                            </div>
+                            <div class="client-info__input-group">
+                                <label for="card-name" class="client-info__label">Владелец:</label>
+                                <input type="text" id="card-name" class="client-info__input" required>
+                            </div>
+                            <div class="client-info__input-group">
+                                <label for="expires" class="client-info__label">Срок действия:</label>
+                                <input type="text" id="expires" class="client-info__input" required>
+                            </div>
+                        </div>
+                        <div class="client-info__card-back">
+                            <div class="client-info__input-group">
+                                <label for="cvv" class="client-info__label">CVV-код:</label>
+                                <input type="text" id="cvv" class="client-info__input" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-info__personal">
+                        <div class="client-info__input-group">
+                            <label for="name" class="client-info__label">Имя:</label>
+                            <input type="text" id="name" class="client-info__input" required>
+                        </div>
+                        <div class="client-info__input-group">
+                            <label for="surname" class="client-info__label">Фамилия:</label>
+                            <input type="text" id="surname" class="client-info__input" required>
+                        </div>
+                        <div class="client-info__input-group">
+                            <label for="birthday" class="client-info__label">Дата рождения:</label>
+                            <input type="date" id="birthday" class="client-info__input" required>
+                        </div>
+                    </div>
+                    <button class="button client-info__submit">Готово</button>
+                </form>
+            </aside>
+        </div>
+    </main>
+    <footer id="contacts" class="footer">
+        <p>&copy; 2026 Элла Ксенофонтова. Все права защищены.</p>
+        <p><a class="footer__link" href="tel:89858944403">+7 (985)-894-44-03</a></p>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script>
+        const orderForm = document.getElementById("order-form");
+        if (orderForm) {
+            orderForm.addEventListener("submit", event => {
+                event.preventDefault();
+                alert("Заказ оформлен!");
+                window.location.href = "index.html";
+            })
+        }
+    </script>
+</body>
+
+</html>

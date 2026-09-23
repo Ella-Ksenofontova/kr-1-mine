@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="site-header">
+            <a class="site-logo" href="index.html">MyShop</a>
+
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__list-item"><a href="./catalog.html" class="site-nav__link">Каталог</a></li>
+                    <li class="site-nav__list-item"><a href="./order.html" class="site-nav__link">Оформить заказ</a>
+                    </li>
+                    <li class="site-nav__list-item"><a href="./contacts.html" class="site-nav__link">Обратная связь</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main class="main">
+        <div class="catalog-wrapper">
+            <h1 class="heading catalog-wrapper__title">Каталог</h1>
+            <aside class="filters-block">
+                <h2 class="heading filters-block__heading">Фильтры</h2>
+                <form class="filters-panel">
+                    <h3 class="heading filters-panel__title">Цена</h3>
+                    <div class="filters-panel__price">
+                        <label for="price-from">От: </label>
+                        <input type="number" id="price-from" class="filters-panel__input">
+                        <label for="price-to">До: </label>
+                        <input type="number" id="price-to" class="filters-panel__input">
+                    </div>
+                    <div class="filters-panel__rating">
+                        <input type="checkbox" id="good-rating" class="filters-panel__checkbox">
+                        <label for="good-rating">Высокий рейтинг</label>
+                        <span class="filters-panel__description">4 и более ⭐</span>
+                    </div>
+                </form>
+            </aside>
+            <div class="product-cards">
+                <article class="product-card">
+                    <div class="badge badge_new">Новинка!</div>
+                    <img src="./images/shoes.jpg" alt="Кроссовки" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Кроссовки</h3>
+                        <p class="product-card__description">Стильные и удобные кроссовки</p>
+                        <p class="product-card__price">Цена: 2500 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+                <article class="product-card">
+                    <img src="./images/pencils.jpg" alt="Цветные карандаши" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Цветные карандаши</h3>
+                        <p class="product-card__description">Яркие и прочные цветные карандаши</p>
+                        <p class="product-card__price">Цена: 200 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+                <article class="product-card">
+                    <img src="./images/perfume.jpg" alt="Парфюм" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Парфюм</h3>
+                        <p class="product-card__description">Ароматный парфюм для женщин</p>
+                        <p class="product-card__price">Цена: 5000 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+                <article class="product-card">
+                    <img src="./images/book.jpg" alt="Книга" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Книга</h3>
+                        <p class="product-card__description">Очень интересная книга</p>
+                        <p class="product-card__price">Цена: 400 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+                <article class="product-card">
+                    <div class="badge badge_sale">Скидка!</div>
+                    <img src="./images/clock.jpg" alt="Часы настенные" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Настенные часы</h3>
+                        <p class="product-card__description">Полезный и красивый предмет для Вашего интерьера</p>
+                        <p class="product-card__price">Цена: <del class="old-price">1200</del> 900 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+                <article class="product-card">
+                    <img src="./images/coat.jpg" alt="Пальто" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Пальто</h3>
+                        <p class="product-card__description">Стильное демисезонное пальто</p>
+                        <p class="product-card__price">Цена: 6500 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+                <article class="product-card">
+                    <img src="./images/doll.jpg" alt="Кукла-пупс" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Кукла-пупс</h3>
+                        <p class="product-card__description">Отличный подарок для девочек</p>
+                        <p class="product-card__price">Цена: 2200 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+                <article class="product-card">
+                    <img src="./images/mobile phone.jpg" alt="Мобильный телефон" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Мобильный телефон</h3>
+                        <p class="product-card__description">Стильный дизайн, мощный аккумулятор, много встроенных
+                            функций</p>
+                        <p class="product-card__price">Цена: 9000 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+                <article class="product-card">
+                    <div class="badge badge_popular">Хит!</div>
+                    <img src="./images/necklace.jpg" alt="Ожерелье" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3 class="product-card__title heading heading_level-3">Ожерелье</h3>
+                        <p class="product-card__description">Стильный аксессуар для любого образа</p>
+                        <p class="product-card__price">Цена: 500 руб.</p>
+                    </div>
+                    <a href="./product.html" class="product-card__link">Подробнее</a>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer id="contacts" class="footer">
+        <p>&copy; 2026 Элла Ксенофонтова. Все права защищены.</p>
+        <p><a class="footer__link" href="tel:89858944403">+7 (985)-894-44-03</a></p>
+    </footer>
+</body>
+
+</html>
