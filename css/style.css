@@ -484,6 +484,7 @@ body {
 .order-wrapper {
   display: grid;
   grid-template-columns: 1fr auto;
+  max-width: 1100px;
 }
 
 .order-wrapper__heading {
